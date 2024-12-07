@@ -3,36 +3,46 @@
 <head>
     <title>Online Registration Form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="display-area.css">
 </head>
 <body>
     <div class="container">
         <h1>Online Registration Form</h1>
         <form id="registrationForm">
             <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" name="fullName" required>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter valid Name" required>
+
+            <label for="usn">USN:</label>
+            <input type="text" id="usn" name="usn" placeholder="Enter valid USN" required> 
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter valid Email" required>
 
             <label for="dob">Date of Birth:</label>
             <input type="date" id="dob" name="dob" required>
 
             <label for="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            <input type="int" id="phoneNumber" name="phoneNumber" placeholder="Enter valid phoneNumber" required>
 
             <label for="gender">Gender:</label>
             <select id="gender" name="gender" required>
+                <option value="select">Select</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>
             </select>
 
             <label for="message">Additional Message:</label>
-            <textarea id="message" name="message"></textarea>
-
+            <textarea id="message" name="message"  placeholder="Message"></textarea>
+            <center>
             <button type="submit">Submit</button>
+        </center>
         </form>
     </div>
     <div id="displayArea" style="display: none;">
-        <h2>Registration Details</h2>
+        <h2>Registered Details</h2>
         <p id="fullNameDisplay"></p>
+        <p id="usnDisplay"></p>
+        <p id="emailDisplay"></p>
         <p id="dobDisplay"></p>
         <p id="phoneNumberDisplay"></p>
         <p id="genderDisplay"></p>
